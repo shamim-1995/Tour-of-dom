@@ -6,7 +6,7 @@
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="styles/styles.css">
     <style>
-        li{
+        .fruits-container li{
             color: tomato;
         }
         #fruits-title{
@@ -32,12 +32,28 @@
             <li>Web Developer hoba?</li>
         </ul>
         </section>
-        <section>
+        <section class="fruits-container">
             <h1 id="fruits-title">Fruits I Like</h1>
             <ul>
-                <li>Monkey jack fruit</li>
-                <li>Green Coconut</li>
-                <li>Wood Apple</li>
+                <li>Monkey jack fruit--Deuya</li>
+                <li>Green Coconut--Dab</li>
+                <li>Wood Apple--Bel</li>
+                <li>sharon fruit--Gab</li>
+                <li>Carambola--Kamranga</li>
+                <li>Elephant apple--Chalta</li>
+                <li>Cherimoya--Atafol</li>
+                <li>Sour wood apple--Kotbel</li>
+                <li>Mask melon--Bangi</li>
+                <li>Golden apple--Amra</li>
+                <li>Pummelo--Jambura</li>
+                <li>Star apple--Jamrul</li>
+                <li>Bengal currant--Koromcha</li>
+                <li>Burmese Grape--Lotkon</li>
+                <li>Garcinia Cowa--Kaufol</li>
+                <li>Water Chestnut--Panifol</li>
+                <li>Fig--Dumur</li>
+                <li>Calamus Erectus--Betfol</li>
+                <li>Baby Coconut--Dab</li>
             </ul>
         </section>
         <section>
@@ -59,17 +75,27 @@
     for(const li of liCollection){
         // console.log(li.innerText);
     }
+    // Option-1. getElementsByTagName.
     const allHeadings = document.getElementsByTagName('h1');
     for(const h1 of allHeadings){
         // console.log(h1.innerText);
     }
 
-
+     // Option-2. getElementById.
     const fruitsTitle = document.getElementById('fruits-title');
     fruitsTitle.innerText = 'Fruits changed by JS';
+    // Option-3. getElementsByClassName.
     const places = document.getElementsByClassName('important-places');
     for(const place of places){
         console.log(place.innerText);
+    }
+    //OPtion-4.querySelector.
+
+    // Option-5. QuerySelectorAll
+    const someLi = document.querySelectorAll('.fruits-container li');
+    // console.log(someLi);
+    for(const li of someLi){
+        console.log(li.innerText);
     }
     </script>
 </body>
