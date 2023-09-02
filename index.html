@@ -21,11 +21,26 @@
             <li>Jalali set</li>
             <li>Shafayet</li>
             <li>Bonobash</li>
+            <li>Web Developer hoba?</li>
+        </ul>
+        <ul>
+            <li>Monkey jack fruit</li>
+            <li>Green Coconut</li>
+            <li>Wood Apple</li>
         </ul>
     </main>
     <script src="js/dom.js"></script>
     <script>
-        console.log('adding JS inside the html file.');
+       const liCollection = document.getElementsByTagName('li');
+    //    console.log(liCollection);
+
+    for(const li of liCollection){
+        console.log(li.innerText);
+    }
+    const allHeadings = document.getElementsByTagName('h1');
+    for(const h1 of allHeadings){
+        console.log(h1.innerText);
+    }
     </script>
 </body>
 </html>
